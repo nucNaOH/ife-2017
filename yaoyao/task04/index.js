@@ -135,22 +135,22 @@ window.onload = function () {
         input.select()
     })
     // keyup
-    window.addEventListener('keyup', function (event) {
-        switch (event.keyCode) {
-            case 37:
-                cube.turnLeft()
-                break;
-            case 38:
-                cube.go()
-                break;
-            case 39:
-                cube.turnRight()
-                break;
-            case 40:
-                cube.turnBack()
-                break;
-            default:
-                break;
-        }
-    })
+    // window.addEventListener('keyup', function (event) {
+    //     switch (event.keyCode) {
+    //         case 37:
+    //             cube.turnLeft()
+    //             break;
+    //         case 38:
+    //             cube.go()
+    //             break;
+    //         case 39:
+    //             cube.turnRight()
+    //             break;
+    //         case 40:
+    //             cube.turnBack()
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // })
 }
