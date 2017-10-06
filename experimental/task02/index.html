@@ -13,10 +13,10 @@
             <div class="nav-home"><span>FE</span></div>
             <div class="nav-menu">
                 <ul>
-                    <li>HOME</li>
-                    <li>PRODUCT</li>
-                    <li>SUPPORT</li>
-                    <li>ABOUT</li>
+                    <li class="nav-menu-item">HOME </li>
+                    <li class="nav-menu-item">PRODUCT <embed class="nav-icon-dropdown" src="img/dropdown.svg"></li>
+                    <li class="nav-menu-item">SUPPORT <embed class="nav-icon-dropdown" src="img/dropdown.svg"></li>
+                    <li class="nav-menu-item">ABOUT <embed class="nav-icon-dropdown" src="img/dropdown.svg"></li>
                 </ul>
             </div>
         </div>
@@ -95,8 +95,76 @@
                 </div>
             </div>
         </div>
-        <div class="table"></div>
-        <div class="form"></div>
+        <div class="table">
+            <table>
+                <caption>Table Caption</caption>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Free Version</th>
+                        <th>Personal Version</th>
+                        <th>Company Version</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Feature A</th>
+                        <td>Some Text Some Text Some Text </td>
+                        <td>Some Text Some Text Some Text </td>
+                        <td>Some Text Some Text Some Text </td>
+                    </tr>
+                    <tr>
+                        <th>Feature B</th>
+                        <td>Some Text Some Text Some Text </td>
+                        <td>Some Text Some Text Some Text </td>
+                        <td>Some Text Some Text Some Text </td>
+                    </tr>
+                    <tr>
+                        <th>Feature C</th>
+                        <td>Some Text Some Text Some Text </td>
+                        <td>Some Text Some Text Some Text </td>
+                        <td>Some Text Some Text Some Text </td>
+                    </tr>
+                    <tr>
+                        <th>Feature D</th>
+                        <td>Some Text Some Text Some Text </td>
+                        <td>Some Text Some Text Some Text </td>
+                        <td>Some Text Some Text Some Text </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Price</th>
+                        <th class="price-free">Free</th>
+                        <th class="price-personal">$9.99/<sup>mo</sup></th>
+                        <th class="price-company">$99.99/<sup>mo</sup></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="form">
+            <div class="form-left">
+                <div class="form-container">
+                    <form>
+                        <div class="form-item">
+                            <input type="text" name="country1" placeholder="select your country">
+                            <i class="triangle-down"></i>
+                        </div>
+                        <div class="form-item">
+                            <input type="text" name="country2" placeholder="select your country">
+                            <i class="triangle-down"></i>
+                        </div>
+                        <div class="form-item">
+                            <input type="email" name="email" placeholder="input your email address">
+                            <input type="submit" value="Submit" id="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="form-right">
+                <img src="img/handshaking.png" alt="handshaking">
+            </div>
+        </div>
         <footer>&copy; 2017 IFE</footer>
     </div>
 
