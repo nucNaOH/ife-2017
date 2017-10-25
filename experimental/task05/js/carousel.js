@@ -1,20 +1,23 @@
 /**
  * 轮播图。 
  * 
- * defaultOption = { timeout: 2000, animation: slide }
+ * defaultOption = { 
+ * duration   : '2s', 
+ * animation  : 'slide', 
+ * interval   : 3000, 
+ * autoSwitch : true 
+ * }
  * 
  * @param {any} dom 
  * @param {any} option 
  */
 function Carousel (dom, option) {
-    const defaultOption = { duration: '2s', animation: 'slide', interal: 3000, autoSwith: true }
-
     this.dom = dom
-    this.option = defaultOption
 
     this.currentItem = 0
     this.autoPalyInterval = null
 
+    this.getOption(option)
     this.initDOM()
     this.start()
 }
@@ -24,19 +27,40 @@ Carousel.prototype.initDOM = function () {
     this.flags = this.dom.querySelectorAll('.carousel-flag-item')
 }
 
+Carousel.prototype.getOption = function (option) {
+    const defaultOption = { duration: '2s', animation: 'slide', interval: 3000, autoSwitch: true }
+    
+    if (option === undefined) {
+        this.option = defaultOption;
+    } else {
+        this.option = {}
+        for (var prop in defaultOption) {
+            if (option[prop] === undefined) {
+                this.option[prop] = defaultOption[prop]
+            } else {
+                this.option[prop] = option[prop]
+            }
+        }
+    }
+}
+
 Carousel.prototype.start = function () {
-    this[this.option.animation + 'Mode']()
+    if (this[this.option.animation + 'Mode'] instanceof Function){
+        this[this.option.animation + 'Mode']()
+    } else {
+        this['fadeMode']()
+    }
     this.getSwitcher().bind(this)(0)
-    if (this.option.autoSwith) {
-        this.autoPalyInterval = setInterval(this.getSwitcher().bind(this), this.option.interal)
+    if (this.option.autoSwitch) {
+        this.autoPalyInterval = setInterval(this.getSwitcher().bind(this), this.option.interval)
     }
     this.flags.forEach((d, i)=> {
         d.onclick = (e) => {
-            console.log(i, this.getSwitcher().bind(this))
+            // console.log(i, this.getSwitcher().bind(this))
             this.getSwitcher().bind(this)(i)
-            if (this.option.autoSwith) {
+            if (this.option.autoSwitch) {
                 clearInterval(this.autoPalyInterval)
-                this.autoPalyInterval = setInterval(this.getSwitcher().bind(this), this.option.interal)
+                this.autoPalyInterval = setInterval(this.getSwitcher().bind(this), this.option.interval)
             }
         }
     })
@@ -53,7 +77,7 @@ Carousel.prototype.getSwitcher = function () {
             return this.slideTo
             break;
         default :
-            return
+            return this.fadeTo
             break;
     }
 }
@@ -69,13 +93,18 @@ Carousel.prototype.slideMode = function () {
             d.style.left = '0px'
         }
 
-        d.style.transition = `transform ${this.option.duration} linear`
+        // d.style.transition = `transform ${this.option.duration} linear`
+        // fix first slide on page loaded
+        function setTransition(obj, elem) {
+            elem.style.transition = `transform ${obj.option.duration} linear`
+        }
+        setTimeout(setTransition.bind(null, this, d), 0)
+        
         d.style.opacity = 1
     })
 }
 
 Carousel.prototype.slideTo = function (index) {
-    console.log(index)
     if (index === this.currentItem) return
     
     const cur = this.currentItem
@@ -84,9 +113,7 @@ Carousel.prototype.slideTo = function (index) {
     this.toggleClass(this.items[cur], 'carousel-active')
     this.toggleClass(this.items[nxt], 'carousel-active')
     
-    
     this.items[cur].style.transform += ' translateX(-960px)'
-    
     this.items[nxt].style.left = parseInt(this.items[nxt].style.left) + 960 * 2 + 'px'
     this.items[nxt].style.transform += 'translateX(-960px)'
 
@@ -102,6 +129,8 @@ Carousel.prototype.slideTo = function (index) {
 Carousel.prototype.fadeMode = function () {
     this.items.forEach(d => {
         d.style.transition = `opacity ${this.option.duration}`
+        d.style.transform = ''
+        d.style.left = '0px'
     })
 }
 

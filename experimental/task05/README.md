@@ -1,7 +1,7 @@
 点击[__这里__](http://nucnaoh.github.io/ife-practice/experimental/task05/index.html)查看最终实现的页面效果.
 
 - [X] 下拉菜单
-- [Y] 轮显Banner
+- [ ] 轮显Banner
 - [X] Tab切换
 - [X] Select联动
 
