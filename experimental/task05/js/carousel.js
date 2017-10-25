@@ -56,7 +56,7 @@ Carousel.prototype.start = function () {
     }
     this.flags.forEach((d, i)=> {
         d.onclick = (e) => {
-            // console.log(i, this.getSwitcher().bind(this))
+            console.log(i, this.getSwitcher().bind(this))
             this.getSwitcher().bind(this)(i)
             if (this.option.autoSwitch) {
                 clearInterval(this.autoPalyInterval)
@@ -108,7 +108,7 @@ Carousel.prototype.slideTo = function (index) {
     if (index === this.currentItem) return
     
     const cur = this.currentItem
-    const nxt = index || (cur + 1) % this.items.length
+    const nxt = (index === undefined) ? (cur + 1) % this.items.length : index
 
     this.toggleClass(this.items[cur], 'carousel-active')
     this.toggleClass(this.items[nxt], 'carousel-active')
