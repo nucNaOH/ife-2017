@@ -1,6 +1,6 @@
 ## 实现静态页面
 
-参照[设计图](./design/homepage.png)实现静态页面，点击[这里](http://nucnaoh.github.io/ife-practice/experimental/task02/index.html)查看最终实现的页面效果.
+参照[设计图](./design/homepage.png)实现静态页面，点击[这里](https://ssdna.github.io/ife-practice/experimental/task02/index.html)查看最终实现的页面效果.
 
 ## 设计图
 

@@ -1,9 +1,9 @@
-点击[__这里__](http://nucnaoh.github.io/ife-practice/experimental/task05/index.html)查看最终实现的页面效果.
+点击[__这里__](https://ssdna.github.io/ife-practice/experimental/task05/index.html)查看最终实现的页面效果.
 
-- [X] 下拉菜单
-- [ ] 轮显Banner
-- [X] Tab切换
-- [X] Select联动
+- [ ] 下拉菜单
+- [X] 轮显Banner
+- [ ] Tab切换
+- [ ] Select联动
 
 ## 编码学习
 
@@ -70,23 +70,3 @@ __联动__：
 ## 阅读练习
 
 JavaScript编码规范
-
-## 交流练习
-
-请在接下来4个任务进行过程中，至少安排一次团队面对面交流，人不方便集齐可以分小组讨论
-
-每天互相Review其他同学的代码，进行学习
-
-## 总结笔记
-
-每天利用0.5小时的时间，在Teambition的分享中新增一篇笔记，完成一篇简要的学习笔记。
-
-__标题__：姓名_1/66学习笔记（例如：祖明_1/66学习笔记）
-
-__内容__：
-
-> 本日新掌握的知识点：
-> 
-> 有疑问的知识点：
-> 
-> 心得体会：
