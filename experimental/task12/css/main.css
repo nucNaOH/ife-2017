@@ -93,7 +93,7 @@ body * {
     height: 1em;
 }
 
-.icon-pause {
+.icon-double {
     display: inline-block;
     border-color: transparent transparent transparent #d9d9d9;
     border-width: 0 0 0 1em;
@@ -105,8 +105,8 @@ body * {
 
 .icon-rectangle {
     display: inline-block;
-    border-color: #d9d9d9;
-    border-width: 1px;
+    border-color: transparent transparent transparent #d9d9d9;
+    border-width: 0 0 0 1em;
     border-style: solid;
     width: 1em;
     height: 1em;

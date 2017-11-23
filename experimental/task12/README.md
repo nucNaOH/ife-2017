@@ -1,4 +1,4 @@
-点击[__这里__](https://ssdna.github.io/ife-practice/experimental/task12/index.html)查看最终实现的页面效果（需要在chrome-devtool里调成手机模式）。
+点击[__这里__](https://ssdna.github.io/ife-practice/experimental/task12/)查看最终实现的页面效果（需要在chrome-devtool里调成手机模式）。
 
 ## 任务描述
 
