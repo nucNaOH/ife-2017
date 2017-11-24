@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1em;
 }
 
 body * {
@@ -24,7 +24,7 @@ body * {
     background-color: #d9d9d9;
     text-align: center;
     /* position: relative; */
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
     padding: 0.5em;
 }
@@ -156,9 +156,9 @@ body * {
 .content-item {
     position: relative;
     margin: 0.3em;
-    padding: 0.3em;
+    /* padding: 0.3em; */
     border: 1px solid #d9d9d9;
-    min-height: 5em;
+    min-height: 4.5em;
 }
 
 .content-icon {
@@ -173,13 +173,40 @@ body * {
     display: inline-block;
     position: absolute;
     left: 2em;
-    right: 0em;
     overflow:hidden;
     text-overflow:ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
+}
+
+.content-operation {
+    display: inline-block;
+    position: absolute;
+    background: #d9d9d9;
+    height: 100%;
+}
+
+.content-operation-left {
+    left: 0;
+    display: none;
+    transform: translateX(-100%);
+}
+
+.content-operation-right {
+    right: 0;
+    display: none;
+    transform: translateX(100%);
+}
+
+.content-button {
+    display: inline-block;
+    line-height: 4.5em;
+    vertical-align: middle;
+    /* margin: 0 1em; */
+    padding: 0 1em;
+    height: 100%;
 }
 
 .footer {
